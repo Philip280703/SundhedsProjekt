@@ -75,5 +75,18 @@ namespace Sundhed.BMI.Domain.Test.BmiEntityTest
             // Assert
             Assert.Throws<ArgumentException>(() => new BmiEntity(140, weight));
         }
+
+
+        [TestCase(200, 100, 25)]
+        [TestCase(190, 90, 24.9)]
+        public void Given_Height_And_Wieght_Then_Bmi_Is_Calculated_Corret(double height, double weight, double expected)
+        {
+            // Act
+            var result = new BmiEntity(height, weight);
+
+            // Assert
+            Assert.AreEqual(expected, Math.Round(result.Bmi, 1));
+        }
+
     }
 }

@@ -8,8 +8,8 @@ namespace Sundhed.BMI.Domain.Models
 {
     public class BmiEntity
     {
-        public double Height { get; private set; }
-        public double Weight { get; private set; }
+        public double Height { get; }
+        public double Weight { get; }
         public double Bmi { get; private set; }
 
         public BmiEntity(double height, double weight) 
@@ -24,11 +24,7 @@ namespace Sundhed.BMI.Domain.Models
                 throw new ArgumentException("Pre-condition er ikke overholdt");
             }
 
-            //logic
-            var bmi = weight / (height * height);
-
-            //post-condition
-            Bmi = bmi;
+            CalculateBmi();
 
         }
 
@@ -46,5 +42,12 @@ namespace Sundhed.BMI.Domain.Models
 
             return true;
         }
+
+
+        protected void CalculateBmi()
+        {
+            Bmi = Weight / (Height/100 * Height/100);
+        }
+
     }
 }
