@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sundhed.Bmi.Application\Sundhed.Bmi.Application.csproj" />
+    <ProjectReference Include="..\Sundhed.BMI.Domain\Sundhed.BMI.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

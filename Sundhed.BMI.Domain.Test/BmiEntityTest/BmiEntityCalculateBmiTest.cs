@@ -32,7 +32,7 @@ namespace Sundhed.BMI.Domain.Test.BmiEntityTest
         /// </summary>
         public class BmiEntityTest : BmiEntity
         {
-            public BmiEntityTest(double height, double weight) : base(height, weight)
+            public BmiEntityTest(double height, double weight) : base(height, weight, 1)
             {
             }
             public new void CalculateBmi()

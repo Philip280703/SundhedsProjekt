@@ -23,7 +23,7 @@ namespace Sundhed.BMI.Domain.Test.BmiEntityTest
             // Arrange
 
             // Act
-            var result = new BmiEntity(height, 100);
+            var result = new BmiEntity(height, 100, 1);
 
             // Assert
         }
@@ -41,7 +41,7 @@ namespace Sundhed.BMI.Domain.Test.BmiEntityTest
             // Act
 
             // Assert
-            Assert.Throws<ArgumentException>(() => new BmiEntity(height, 100));
+            Assert.Throws<ArgumentException>(() => new BmiEntity(height, 100, 1));
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Sundhed.BMI.Domain.Test.BmiEntityTest
             // Arrange
 
             // Act
-            var result = new BmiEntity(140, weight);
+            var result = new BmiEntity(140, weight, 1);
 
             // Assert
         }
@@ -73,7 +73,7 @@ namespace Sundhed.BMI.Domain.Test.BmiEntityTest
             // Act
 
             // Assert
-            Assert.Throws<ArgumentException>(() => new BmiEntity(140, weight));
+            Assert.Throws<ArgumentException>(() => new BmiEntity(140, weight, 1));
         }
 
 
@@ -82,7 +82,7 @@ namespace Sundhed.BMI.Domain.Test.BmiEntityTest
         public void Given_Height_And_Wieght_Then_Bmi_Is_Calculated_Corret(double height, double weight, double expected)
         {
             // Act
-            var result = new BmiEntity(height, weight);
+            var result = new BmiEntity(height, weight, 1);
 
             // Assert
             Assert.AreEqual(expected, Math.Round(result.Bmi, 1));

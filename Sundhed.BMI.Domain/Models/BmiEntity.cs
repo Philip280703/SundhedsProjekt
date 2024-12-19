@@ -11,8 +11,9 @@ namespace Sundhed.BMI.Domain.Models
         public double Height { get; }
         public double Weight { get; }
         public double Bmi { get; private set; }
+        public int Id { get; private set; }
 
-        public BmiEntity(double height, double weight) 
+        public BmiEntity(double height, double weight, int id) 
         {
 
             // check pre-condition
