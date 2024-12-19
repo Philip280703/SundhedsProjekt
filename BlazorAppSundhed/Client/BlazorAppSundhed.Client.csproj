@@ -10,6 +10,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.11" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Sundhed.Bmi.Application\Sundhed.Bmi.Application.csproj" />
+    <ProjectReference Include="..\..\Sundhed.BMI.Domain\Sundhed.BMI.Domain.csproj" />
+    <ProjectReference Include="..\..\Sundhed.Bmi.Infrastructor\Sundhed.Bmi.Infrastructor.csproj" />
     <ProjectReference Include="..\Shared\BlazorAppSundhed.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿using Sundhed.Bmi.Application.Command.Repositories;
+﻿using Sundhed.Bmi.Application.Repositories;
 using Sundhed.BMI.Domain.Models;
 using System;
 using System.Collections.Generic;

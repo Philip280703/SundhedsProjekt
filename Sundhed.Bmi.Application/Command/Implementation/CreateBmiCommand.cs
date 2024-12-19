@@ -1,4 +1,4 @@
-﻿using Sundhed.Bmi.Application.Command.Repositories;
+﻿using Sundhed.Bmi.Application.Repositories;
 using Sundhed.BMI.Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ namespace Sundhed.Bmi.Application.Command.Implementation
         {
             _bmiRepository = bmiRepository;
         }
-        void ICreateBmiCommand.Create(BmiCreateRequestDto bmiCreateRequestDto) 
+        void ICreateBmiCommand.Create(BmiCreateRequestDto bmiCreateRequestDto)
         {
             var id = _bmiRepository.GetNextKey();
             var bmi = new BmiEntity(bmiCreateRequestDto.Height, bmiCreateRequestDto.Weight, id);

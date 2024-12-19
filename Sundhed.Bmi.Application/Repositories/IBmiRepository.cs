@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sundhed.Bmi.Application.Command.Repositories
+namespace Sundhed.Bmi.Application.Repositories
 {
     public interface IBmiRepository
     {
